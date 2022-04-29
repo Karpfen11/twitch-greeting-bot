@@ -49,12 +49,11 @@ class bot:
         while True:
             data = irc.recv(1024).decode("utf8")
             message = data.split()
-
-            if data == "PING":
-                self.send(irc, "PONG")
-            elif message[1] == "PRIVMSG":
+            if message[1] == "PRIVMSG":
                 self.commands(irc, message)
             for line in data.splitlines():
+                if line == "PING :tmi.twitch.tv":
+                    self.send(irc, "PONG")
                 print(line)
 
 #define a instance of the bot class to start the bot
