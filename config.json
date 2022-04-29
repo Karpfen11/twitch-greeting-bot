@@ -1,0 +1,6 @@
+// you can get the twitch oauth token here: https://twitchapps.com/tmi/
+{
+	"username" : "your bot username",
+	"channel" : "your channel name",
+	"token" : "the oauth token from the bot acc."
+}
